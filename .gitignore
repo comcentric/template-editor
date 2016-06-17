@@ -1,0 +1,16 @@
+node_modules
+npm-debug-log
+src/**/build
+public/app.js
+public/app.css
+.idea/workspace.xml
+.idea/*.*
+.idea
+.DS_Store
+npm-debug.log
+src/**/npm-debug.log
+build
+reports
+build-server
+.idea
+server

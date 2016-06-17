@@ -1,0 +1,78 @@
+
+.resizeable-corner {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border: 1px solid grey;
+  background-color: #D4D0D0;
+  box-sizing: border-box;
+  display: none;
+
+  &.left {
+    left: -5px;
+    cursor: w-resize;
+  }
+
+  &.right {
+    right: -5px;
+    cursor: e-resize;
+  }
+
+  &.middle {
+    top: 50%;
+    margin-top: -5px;
+    cursor: ew-resize;
+  }
+
+  &.center {
+    left: 50%;
+    margin-left: -5px;
+    cursor: ns-resize;
+  }
+
+  &.top {
+    top: -5px;
+
+    &.right {
+      cursor: nesw-resize;
+    }
+
+    &.left {
+      cursor: nwse-resize;
+    }
+  }
+
+  &.bottom {
+    bottom: -5px;
+
+    &.right {
+      cursor: nwse-resize;
+    }
+
+    &.left {
+      cursor: nesw-resize;
+    }
+  }
+
+}
+
+.moveable {
+  cursor: move;
+}
+
+.transformable {
+  min-width: 20px;
+  min-height: 20px;
+  position: absolute;
+
+  &:hover, &:active, &:focus {
+    .resizeable-corner {
+      display: block;
+    }
+  }
+
+  img {
+    width: 100%;
+    height: auto;
+  }
+}
